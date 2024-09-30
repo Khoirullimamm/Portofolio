@@ -1,0 +1,315 @@
+/* Import Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+/* Global styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Header */
+header {
+    background-color: #4CAF50;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+/* Section Styling */
+section {
+    padding: 40px;
+    margin: 20px 0;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Home Section */
+#home {
+    background-image: url('background.jpg'); /* Pastikan menambahkan gambar 'background.jpg' */
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-align: center;
+    padding: 100px 20px;
+    border-radius: 0;
+}
+
+#home h2 {
+    font-size: 36px;
+}
+
+/* About Section */
+#about img {
+    border-radius: 50%;
+    margin: 20px 0;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+}
+
+/* Contact Section */
+#contact form {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+#contact input, #contact textarea {
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+#contact input[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+#contact input[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+    header {
+        padding: 15px;
+    }
+
+    section {
+        padding: 20px;
+    }
+
+    nav a {
+        display: block;
+        margin: 10px 0;
+    }
+
+    #home {
+        padding: 60px 20px;
+    }
+}
+/* Responsiveness for small screens */
+@media (max-width: 768px) {
+    header {
+        text-align: left;
+    }
+
+    nav a {
+        display: block;
+        margin: 10px 0;
+        text-align: center;
+    }
+}
+/* Animasi pada gambar di bagian About */
+@keyframes slideIn {
+    from {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+#about img {
+    animation: slideIn 0.8s ease-out;
+}
+
+/* Transisi untuk hover efek pada gambar */
+img:hover {
+    transform: scale(1.1);
+    transition: transform 0.3s ease-in-out;
+}
+/* Navigasi menggunakan Flexbox */
+header nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav a {
+    margin: 0 10px;
+}
+/* Flexbox Layout untuk About Me */
+#about {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+#about img {
+    margin-bottom: 20px;
+}
+
+#about p {
+    max-width: 600px;
+    text-align: center;
+    font-size: 18px;
+}
+
+/* Contact Section Flexbox */
+#contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px;
+    background-color: #f4f4f4;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+/* Parallax Background for Home */
+#home {
+    background-image: url('My picture/image.jpg'); /* Sesuaikan dengan gambar Anda */
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    color: white;
+    text-align: center;
+    padding: 150px 20px;
+}
+
+#home h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+footer a {
+    color: white;
+    margin: 0 10px;
+    font-size: 24px;
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: #4CAF50;  /* Warna hover untuk ikon */
+}
+@media (max-width: 768px) {
+    #about {
+        padding: 20px;
+    }
+
+    #about p {
+        font-size: 16px;
+    }
+
+    #contact {
+        padding: 20px;
+    }
+
+    footer {
+        padding: 15px;
+    }
+
+    footer a {
+        font-size: 20px;
+    }
+}
+/* Grid Layout untuk Galeri */
+#gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 15px;
+    padding: 20px;
+}
+
+/* Efek animasi saat gambar muncul */
+#gallery img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s;
+}
+
+#gallery img:hover {
+    transform: scale(1.05);
+}
+
+/* Progress Bar */
+.skill {
+    margin: 10px 0;
+}
+
+.progress {
+    background-color: #f3f3f3;
+    border-radius: 5px;
+}
+
+.progress-bar {
+    height: 20px;
+    background-color: #4CAF50;
+    width: 0;  /* Nanti kita akan mengubah ini dengan JS */
+    border-radius: 5px;
+}
+.btn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #45a049; /* Efek hover pada tombol */
+}
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+#download {
+    text-align: center; /* Memusatkan teks di dalam section */
+    margin: 20px 0; /* Memberikan jarak atas dan bawah */
+}
+
+.btn {
+    display: inline-block; /* Membuat tombol sebagai inline-block untuk pemusatan */
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #45a049; /* Efek hover pada tombol */
+}
